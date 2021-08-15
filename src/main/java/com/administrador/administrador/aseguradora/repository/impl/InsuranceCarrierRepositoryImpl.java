@@ -6,9 +6,12 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.springframework.stereotype.Repository;
+
 import com.administrador.administrador.aseguradora.repository.InsuranceCarrierRepository;
 import com.google.gson.Gson;
 
+@Repository
 public class InsuranceCarrierRepositoryImpl implements InsuranceCarrierRepository {
 	
 	public InsuranceCarrierRepositoryImpl() {

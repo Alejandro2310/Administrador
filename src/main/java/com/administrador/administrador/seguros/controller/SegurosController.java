@@ -30,7 +30,7 @@ public class SegurosController {
 	}
 	
 	@DeleteMapping(value = "insurance/delete")
-	public ResponseEntity<Void> deleteInsurance(@RequestBody Integer insuranceId){
+	public ResponseEntity<Void> deleteInsurance(@RequestParam Integer insuranceId){
 		insuranceService.deleteInsurance(insuranceId);
 		return new ResponseEntity<>( HttpStatus.OK);
 	}
@@ -42,8 +42,8 @@ public class SegurosController {
 	}
 	
 	@GetMapping(value = "insurance/show")
-	public ResponseEntity<InsuranceSummary> showInsuranceById(@RequestParam Integer Id){
-		InsuranceSummary insurance = insuranceService.showInsuranceById(Id);
+	public ResponseEntity<InsuranceSummary> showInsuranceById(@RequestParam Integer insuranceId){
+		InsuranceSummary insurance = insuranceService.showInsuranceById(insuranceId);
 		return new ResponseEntity<>(insurance, HttpStatus.OK);
 	}
 

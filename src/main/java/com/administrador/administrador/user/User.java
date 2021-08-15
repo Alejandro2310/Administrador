@@ -9,15 +9,14 @@ public class User {
 	private String nombre;
 	
 	// tiene que ser de 4 dígitos
-	private Integer password;
+	private String password;
 	
-	public User(String email, Integer password, String nombre) {
+	public User(String email, String password, String nombre) {
 		super();
 		this.email = email;
 		this.password = password;
 		this.nombre = nombre;
 	}
-
 	public Integer getId() {
 		return id;
 	}
@@ -34,11 +33,11 @@ public class User {
 		this.email = email;
 	}
 
-	public Integer getPassword() {
+	public String getPassword() {
 		return password;
 	}
 
-	public void setPassword(Integer password) {
+	public void setPassword(String password) {
 		this.password = password;
 	}
 

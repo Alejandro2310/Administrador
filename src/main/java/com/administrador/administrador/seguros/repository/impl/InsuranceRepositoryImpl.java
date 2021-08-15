@@ -35,11 +35,15 @@ public class InsuranceRepositoryImpl implements InsuranceRepository{
 	@Override
 	public List<Insurance> showInsurancesByUser(Integer userId) {
 		List<Insurance> insurances = new ArrayList<Insurance>(insuranceMap.values());
-		insurances = insurances
-			    .stream()
-			    .filter(x -> !x.getUserId().equals(userId))
-			    .collect(Collectors.toList());
-		return insurances;
+		List<Insurance> filteredInsurances = new ArrayList<Insurance>();
+		for(int i = 0; i < insurances.size(); i++) {
+			if(insurances.get(i).getUserId() == userId) {
+				filteredInsurances.add(insurances.get(i));
+			}else {
+				continue;
+			}
+		}
+		return filteredInsurances;
 	}
 
 	@Override

@@ -51,10 +51,12 @@ public class InsuranceServiceImpl implements InsuranceService {
 	}
 
 	private InsuranceSummary summarizeInsurance(Insurance insurance) {
-		return new InsuranceSummary(
+		InsuranceSummary insuranceSummary = new InsuranceSummary(
 				insurance.getNombreAseguradora(),
 				insurance.getCategoriaSeguro(), 
 				insurance.getCantidadSeguro());
+		insuranceSummary.setId(insurance.getId());
+		return insuranceSummary;
 	}
 
 }
