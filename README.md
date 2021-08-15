@@ -22,7 +22,7 @@ Los valores de parámetros y bodys escritos en este README son ejemplos que se p
 
 Lo ideal hubiera sido hacer tests unitarios pero no se han llevado a cabo por falta de tiempo.
 
-Entiendo que la idea era crear una Entidad a partir de
+Entiendo que la idea era crear una Entidad a partir del archivo "aseguradoras.json" pero para la creación de los Endpoints no lo he visto necesario.
 
 
 
